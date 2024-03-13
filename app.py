@@ -50,10 +50,10 @@ def main():
   st.write("Grow your wealth with the power of compound interest!")
 
   # Input fields
-  principal = st.number_input("Initial Investment ($)", min_value=0.0)
-  monthly_investment = st.number_input("Monthly Investment ($)", min_value=150.0)
+  principal = st.number_input("Initial Investment (€)", min_value=0.0)
+  monthly_investment = st.number_input("Monthly Investment (€)", min_value=50.0)
   interest_rate = st.number_input("Annual Interest Rate (%)", min_value=4.0) / 100  # Convert percentage to decimal
-  years = st.number_input("Investment Period (Years)", min_value=15)
+  years = st.slider("Investment Period (Years)", min_value=5, max_value=99, value=5)
 
   # Button to trigger calculation
   if st.button("Calculate"):
